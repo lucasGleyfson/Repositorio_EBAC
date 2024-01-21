@@ -1,5 +1,5 @@
-<!-- 
-1) Criar uma aplicação de lista de tarefas contendo um formulário com um campo para adicionar o nome da tarefa e um botão para cadastrar a tarefa.
+<!-- Crie uma aplicação de lista de tarefas
+1) Crie um formulário com um campo para adicionar o nome da tarefa e um botão para cadastrar a tarefa.
 
 2) Ao submeter o formulário, adicione um elemento <li> dentro de
 uma lista ordenada ou não.
@@ -13,23 +13,29 @@ uma lista ordenada ou não.
 
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
     <link rel="stylesheet" href="main.css">
-    <title>Document</title>
 </head>
 
 <body>
 
     <h1>Lista de Tarefas</h1>
 
-    <form id="taskForm">
-        <label for="taskInput">Nova Tarefa:</label>
-        <input type="text" id="taskInput" placeholder="Digite o nome da tarefa" required>
-        <button type="button" onclick="addTask()">Adicionar Tarefa</button>
+    <form>
+        <input type="text" id="NomeTarefa" required placeholder="Nome da Tarefa">
+        <button type="submit">Adicionar Tarefas</button>
+
     </form>
+
+    <ul id="Lista"></ul>
+
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="main.js"></script>
+
 </body>
+
 </html>
