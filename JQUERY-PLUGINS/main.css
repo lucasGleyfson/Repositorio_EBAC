@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    margin: 30px;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.dir {
+    text-align: center;
+}
+
+
+
+form div {
+    display: inline-block;
+    width: 45%; /* Define a largura de cada div para ocupar metade do espaço disponível */
+    margin-right: 5%; /* Adiciona um espaço entre as divs */
+    vertical-align: top; /* Alinha os elementos ao topo para evitar desalinhamentos */
+}
+
+label {
+    display: block; /* Para que os rótulos apareçam em uma linha separada */
+}

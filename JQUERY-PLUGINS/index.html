@@ -4,13 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <title>Formulário</title>
 </head>
 
 <body>
 
+    <header>
+        <nav>
+            <ul>
+                <li>01</li>
+                <li>02</li>
+            </ul>
+        </nav>
+    </header>
 
 
+    <div class="container">
+
+        <div class="esq">
+
+        </div>
+
+        <div class="dir">
+            <form>
+                <div>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome">
+                </div>
+                <div>
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email">
+                </div>
+                <div>
+                    <label for="telefone">Telefone</label>
+                    <input type="tel" id="telefone">
+                </div>
+                <div>
+                    <label for="cpf">CPF</label>
+                    <input type="number" id="cpf">
+                </div>
+                <div>
+                    <label for="endereco">Endereço</label>
+                    <input type="text" id="endereco">
+                </div>
+                <div>
+                    <label for="cep">Cep</label>
+                    <input type="number" id="cep">
+                </div>
+            </form>
+        </div>
+    </div>
 
 
 
@@ -23,7 +67,7 @@
 
     <!-- IMPORTEI JQUERY -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <!-- IMPORTEI DO PLUGIN MASK -->
+    <!-- IMPORTEI O PLUGIN MASK -->
     <script src="./js/jquery.mask.min.js"></script>
     <!-- IMPORTEI O VALIDATION PLUGIN -->
     <script src="./js/jquery.validate.min.js"></script>
