@@ -1,0 +1,18 @@
+@use './reset';
+@use './variaveis';
+
+
+body {
+    background-color: variaveis.$corPrincipal;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+    h1 {
+        color: variaveis.$corTexto;
+    }
+}
