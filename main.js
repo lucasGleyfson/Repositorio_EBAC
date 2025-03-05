@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', async function () {
     const nameElement = document.querySelector('#name');
     const usernameElement = document.querySelector('#username');
     const avatarElement = document.querySelector('#avatar');
@@ -7,18 +7,24 @@ document.addEventListener('DOMContentLoaded', function(){
     const followingElement = document.querySelector('#following');
     const linkElement = document.querySelector('#link');
 
+    try {
+        const response = await fetch('https://api.github.com/users/lucasGleyfson');
 
-    fetch('https://api.github.com/users/lucasGleyfson')
-        .then(function(res){
-            return res.json();
-        })
-        .then(function(json){
-            nameElement.innerText = json.name;
-            usernameElement.innetText = json.login;
-            avatarElement.src = json.avatar_url;
-            followingElement.innerText = json.following;
-            followersElement.innerText = json.followers;
-            reposElement.innerText = json.public_repos;
-            linkElement.href = json.html_url;
-        })
-})
+        if (!response.ok) {
+            throw new Error(`Erro ao buscar dados: ${response.status} - ${response.statusText}`);
+        }
+
+        const json = await response.json();
+
+        nameElement.innerText = json.name || 'Nome não disponível';
+        usernameElement.innerText = json.login || 'Usuário não disponível';
+        avatarElement.src = json.avatar_url || '';
+        followingElement.innerText = json.following || 0;
+        followersElement.innerText = json.followers || 0;
+        reposElement.innerText = json.public_repos || 0;
+        linkElement.href = json.html_url || '#';
+    } catch (error) {
+        console.error('Erro ao buscar dados do GitHub:', error);
+        nameElement.innerText = 'Erro ao carregar dados';
+    }
+});
